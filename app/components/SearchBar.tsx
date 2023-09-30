@@ -17,9 +17,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             type="text" 
             placeholder="Search Movies here..." 
             value={query} 
+            className="bg-transparent border outline-none"
             onChange={(e) => setQuery(e.target.value)} 
             />
             <button onClick={handleSearch}>Search</button>
         </div>
     )
 }
+
+export default SearchBar
