@@ -40,16 +40,11 @@ const page: React.FC = () => {
   };
 
   return(
-    <div>
-      <h1>Movie Recommendation App</h1>
+    <div className='w-full'>
       <SearchBar onSearch={handleSearch}/>
-      <div className='flex'>
-        <div className='w-1/2'>
+      <div className='flex justify-center my-10'>
           <MovieList movies={searchResults} onGenerateRecommendations={handleGenerateRecommendations} />
-        </div>
-        <div className='w-1/2'>
           <MovieRecommendation recommendation={recommendations} />
-        </div>
       </div>
     </div>
   )
